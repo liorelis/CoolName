@@ -1,43 +1,31 @@
 <!DOCTYPE html>
-<html lang="he" dir="rtl">
+<html lang="he">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>המערכת של ליאור אליס - ויזואליזציה לקבלת החלטות במכירות</title>
-  <script type="module" src="https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js"></script>
+  <title>המערכת של VisualPro - מערכת ויזואליזציה רלוונטית לקבלת החלטות בנתוני שוק</title>
   <style>
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #74ebd5, #acb6e5);
+      background: linear-gradient(135deg, #74ebd5, #ACB6E5);
       color: #333;
       text-align: center;
       padding: 40px;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-    header {
-      margin-bottom: 30px;
     }
     h1 {
       font-size: 2.5em;
-      margin: 0;
-      color: #1a3c34;
+      margin-bottom: 20px;
     }
     p {
       font-size: 1.2em;
-      max-width: 800px;
-      margin: 20px auto;
-      line-height: 1.6;
+      margin-bottom: 30px;
     }
     .button-container {
       display: flex;
       justify-content: center;
       gap: 20px;
       flex-wrap: wrap;
-      margin: 30px 0;
     }
     .nav-button {
       padding: 15px 30px;
@@ -47,77 +35,21 @@
       font-size: 1em;
       cursor: pointer;
       transition: transform 0.3s, background 0.3s;
-      color: #333;
-      font-weight: bold;
     }
     .nav-button:hover {
       transform: scale(1.1);
       background: linear-gradient(45deg, #a1c4fd, #c2e9fb);
     }
-    .section {
-      max-width: 1200px;
-      margin: 40px auto;
-      padding: 20px;
-      background: rgba(255, 255, 255, 0.9);
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-    tableau-viz {
-      width: 100%;
-      height: 80vh;
-      min-height: 500px;
-      margin-top: 20px;
-    }
-    @media (max-width: 768px) {
-      h1 {
-        font-size: 2em;
-      }
-      p {
-        font-size: 1em;
-      }
-      .nav-button {
-        padding: 12px 20px;
-        font-size: 0.9em;
-      }
-    }
   </style>
 </head>
 <body>
-  <header>
-    <h1>המערכת של ליאור אליס - מערכת ויזואליזציה לקבלת החלטות במכירות</h1>
-    <p>מטרות המערכת: לספק כלים ויזואליים מתקדמים לניתוח נתוני מכירות, זיהוי מגמות, ושיפור רווחיות באמצעות קבלת החלטות מושכלות.</p>
-  </header>
+  <h1>המערכת של VisualPro - מערכת ויזואליזציה רלוונטית לקבלת החלטות בנתוני שוק</h1>
+  <p>מטרות המערכת: לאפשר קבלת החלטות עסקיות מושכלות, זיהוי מגמות, וניהול סיכונים באמצעות ויזואליזציה מתקדמת של דאטה.</p>
 
-  <main>
-    <div class="button-container">
-      <button class="nav-button" onclick="navigateTo('dash1.html')" aria-label="מערכת 1 - רווחיות ממוצעת לפי סוג מוצר">מערכת 1 - רווחיות ממוצעת לפי סוג מוצר</button>
-      <button class="nav-button" onclick="navigateTo('dash2.html')" aria-label="מערכת 2 - סך מכירות לפי איזור גאוגרפי">מערכת 2 - סך מכירות לפי איזור גאוגרפי</button>
-      <button class="nav-button" onclick="navigateTo('dash3.html')" aria-label="מערכת 3 - איכות/דירוג מוצרים לפי סוג">מערכת 3 - איכות/דירוג מוצרים לפי סוג</button>
-    </div>
-
-    <section class="section" id="tableau">
-      <h2>סקירה ויזואלית מרכזית 📊</h2>
-      <p>התענגו על הוויזואליזציה המרכזית שלנו - נתוני מכירות מפורטים להחלטות חכמות! 👇</p>
-      <tableau-viz
-        id="tableauViz"
-        src="https://public.tableau.com/views/main_17465564854220/Dashboard1?:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"
-        toolbar="bottom"
-        hide-tabs
-        width="100%"
-        height="800">
-        <p>מצטערים, הוויזואליזציה אינה זמינה. אנא בדקו את החיבור שלכם או נסו שוב מאוחר יותר.</p>
-      </tableau-viz>
-    </section>
-  </main>
-
-  <script>
-    function navigateTo(page) {
-      const buttons = document.querySelectorAll('.nav-button');
-      buttons.forEach(btn => btn.disabled = true);
-      setTimeout(() => {
-        window.location.href = page;
-      }, 300);
-    }
-  </script>
+  <div class="button-container">
+    <button class="nav-button" onclick="location.href='dash1.html'">מערכת 1 - ניתוח מגמות</button>
+    <button class="nav-button" onclick="location.href='dash2.html'">מערכת 2 - ניתוח לקוחות</button>
+    <button class="nav-button" onclick="location.href='dash3.html'">מערכת 3 - ניתוח שוק</button>
+  </div>
 </body>
 </html>
